@@ -1,0 +1,228 @@
+{
+  "careers": [
+    {
+      "id": 1,
+      "title": "Senior React Developer",
+      "institute": "Fams Technologies",
+      "salary": 50000,
+      "location": "London, UK",
+      "description": {
+        "about": "We are an innovative tech company focused on delivering cutting-edge web solutions. We are seeking a highly skilled Senior React Developer to join our dynamic team and play a key role in building world-class applications.",
+        "role": {
+          "responsibilities": [
+            "Design, develop, and maintain high-performance web applications using React.",
+            "Collaborate with cross-functional teams to define and deliver robust, scalable solutions.",
+            "Optimize applications for maximum speed and scalability.",
+            "Mentor and guide junior developers to foster their growth and improve code quality."
+          ]
+        },
+        "ideal_profile": {
+          "requirements": [
+            "At least 3 years of experience in React development.",
+            "Strong proficiency in JavaScript and modern web technologies.",
+            "Proven experience in building high-quality, user-friendly web applications.",
+            "Excellent problem-solving and communication skills."
+          ]
+        },
+        "compensation": "Competitive salary with performance-based bonuses.",
+        "what_on_offer": [
+          "A challenging and rewarding work environment.",
+          "Opportunity to work with a talented team on innovative projects.",
+          "Flexible working options."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "title": "Plumber",
+      "salary": 40000,
+      "institute": "Engineer hub",
+      "location": "Bowser's Castle",
+      "description": {
+        "about": "We are a growing company committed to providing top-tier plumbing services. We are looking for a dedicated and experienced Plumber to join our team and help maintain the highest quality standards in our work.",
+        "role": {
+          "responsibilities": [
+            "Install and maintain plumbing systems in residential and commercial settings.",
+            "Diagnose plumbing issues and perform necessary repairs.",
+            "Ensure all plumbing systems meet safety and quality standards.",
+            "Provide customers with expert advice and recommendations."
+          ]
+        },
+        "ideal_profile": {
+          "requirements": [
+            "Minimum of 2 years of experience as a Plumber.",
+            "Strong knowledge of plumbing systems, tools, and techniques.",
+            "Excellent problem-solving and diagnostic skills.",
+            "Ability to work independently and as part of a team."
+          ]
+        },
+        "compensation": "Competitive salary with performance incentives.",
+        "what_on_offer": [
+          "Stable career growth and professional development.",
+          "Opportunities to work on diverse projects.",
+          "Flexible working hours."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "title": "Gym Leader",
+      "salary": 75000,
+      "institute": "World ent.",
+      "location": "Kanto Region",
+      "description": {
+        "about": "As a prestigious leader in the world of Pokémon battles, we are looking for an experienced Gym Leader to join our ranks and oversee the challenges within the Kanto Region.",
+        "role": {
+          "responsibilities": [
+            "Organize and oversee gym battles, ensuring fair competition.",
+            "Mentor aspiring trainers, providing valuable advice and guidance.",
+            "Maintain the gym facilities and ensure they are up to the highest standards.",
+            "Promote the spirit of fair play and integrity in Pokémon battles."
+          ]
+        },
+        "ideal_profile": {
+          "requirements": [
+            "In-depth knowledge of Pokémon battle mechanics and strategies.",
+            "Excellent leadership and mentorship abilities.",
+            "Ability to manage and motivate a team of trainers.",
+            "Strong communication and interpersonal skills."
+          ]
+        },
+        "compensation": "Competitive salary with potential performance bonuses.",
+        "what_on_offer": [
+          "A unique opportunity to lead in one of the most exciting and dynamic fields.",
+          "Access to world-class resources and facilities.",
+          "Opportunity to make a significant impact on the next generation of trainers."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "title": "Vue Developer",
+      "salary": 40000,
+      "institute": "Ents Technologies",
+      "location": "Liverpool, UK",
+      "description": {
+        "about": "Join our fast-growing tech company as a Vue Developer, where you'll have the opportunity to work on exciting and impactful projects that will shape the future of web development.",
+        "role": {
+          "responsibilities": [
+            "Build and maintain interactive user interfaces using Vue.js.",
+            "Work closely with backend developers to ensure seamless integration.",
+            "Participate in code reviews to maintain high code quality.",
+            "Contribute to architectural decisions and best practices."
+          ]
+        },
+        "ideal_profile": {
+          "requirements": [
+            "At least 2 years of experience with Vue.js and JavaScript.",
+            "Familiarity with front-end build tools and version control systems.",
+            "Experience in building scalable, responsive web applications.",
+            "Strong communication skills and ability to collaborate effectively in teams."
+          ]
+        },
+        "compensation": "Competitive salary with opportunities for growth.",
+        "what_on_offer": [
+          "Challenging and innovative projects.",
+          "Continuous learning and career development opportunities.",
+          "Work-life balance with flexible working options."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "title": "Tutorial Maker",
+      "salary": 35000,
+      "institute": "Kemproc",
+      "location": "Manchester, UK",
+      "description": {
+        "about": "We are looking for a creative and passionate Tutorial Maker to join our team. This role will involve developing educational content that helps users master various technical concepts and tools.",
+        "role": {
+          "responsibilities": [
+            "Create engaging and informative tutorials for various topics.",
+            "Collaborate with subject matter experts to ensure accuracy.",
+            "Develop content across multiple formats, including text, video, and interactive guides.",
+            "Maintain and update tutorials to keep them relevant and up to date."
+          ]
+        },
+        "ideal_profile": {
+          "requirements": [
+            "Experience in content creation, particularly in technical subjects.",
+            "Strong written and verbal communication skills.",
+            "Creative mindset with a focus on simplifying complex topics.",
+            "Familiarity with various content creation tools and platforms."
+          ]
+        },
+        "compensation": "Competitive salary with performance-based incentives.",
+        "what_on_offer": [
+          "Creative freedom to explore new ideas and formats.",
+          "Opportunity to make an impact by educating and empowering others.",
+          "Flexible work schedule."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "title": "Website Manager",
+      "salary": 50000,
+      "institute": "Fams Technologies",
+      "location": "Berlin, Germany",
+      "description": {
+        "about": "As a Website Manager, you will be responsible for ensuring the smooth operation of our website, optimizing its performance, and improving user engagement.",
+        "role": {
+          "responsibilities": [
+            "Manage the day-to-day operations of the website.",
+            "Ensure website functionality, performance, and security are maintained.",
+            "Collaborate with design, marketing, and development teams to implement new features.",
+            "Monitor analytics and make data-driven decisions to improve user experience."
+          ]
+        },
+        "ideal_profile": {
+          "requirements": [
+            "At least 2 years of experience in website management or a related field.",
+            "Strong knowledge of web technologies and content management systems.",
+            "Experience with web analytics tools and performance optimization.",
+            "Excellent project management and communication skills."
+          ]
+        },
+        "compensation": "Competitive salary with performance bonuses.",
+        "what_on_offer": [
+          "Work with an innovative and dynamic team.",
+          "Opportunities for personal and professional development.",
+          "A supportive and flexible working environment."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "title": "Food Tester",
+      "salary": 30000,
+      "institute": "Ketchup Republic",
+      "location": "London, UK",
+      "description": {
+        "about": "We are seeking a detail-oriented and passionate Food Tester to join our team. This role involves evaluating food products to ensure they meet quality standards and customer expectations.",
+        "role": {
+          "responsibilities": [
+            "Conduct sensory evaluations of food products including taste, texture, and smell.",
+            "Provide detailed feedback to product development teams.",
+            "Ensure food products meet regulatory standards and quality guidelines.",
+            "Collaborate with teams to improve product recipes and formulations."
+          ]
+        },
+        "ideal_profile": {
+          "requirements": [
+            "A refined palate and attention to detail.",
+            "Experience in the food industry or sensory analysis is a plus.",
+            "Strong communication skills for providing clear feedback.",
+            "Ability to work well in a team and collaborate with different departments."
+          ]
+        },
+        "compensation": "Competitive salary with benefits.",
+        "what_on_offer": [
+          "Exciting opportunities to work with leading food brands.",
+          "A chance to contribute to product innovation and improvement.",
+          "Flexible working hours."
+        ]
+      }
+    }
+  ]
+}
