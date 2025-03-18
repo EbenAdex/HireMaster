@@ -9,7 +9,17 @@ body {
   padding: 20px;
   font-family: "Poppins";
   background: var(--secondary);
+  animation: skeleton-loading 1.5s infinite;
 }
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
 * {
   color: #4b4b4b;
   margin: 0;
@@ -117,7 +127,7 @@ form label span {
 }
 .careers > a p:last-child {
   font-size: 0.8em;
-  color: #bbb;
+  color: #0c662d;
 }
 
 /* careers details */

@@ -1,8 +1,16 @@
-export default function ApplyForm() {
+import { useNavigate } from "react-router-dom";
+
+export default function ApplyForm() { 
+    const navigate = useNavigate();
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        navigate("/Careers");
+    };
     return(
         <div className="apply-form">
             <h2>Apply Below</h2>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="name">FirstName</label>
                     <input type="text" id="name" name="name" required />

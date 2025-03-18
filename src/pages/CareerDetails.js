@@ -1,22 +1,21 @@
-
-import { useLoaderData, useNavigate, useParams } from "react-router-dom";
-
+import { useLoaderData, useNavigate } from "react-router-dom";
+import HydrationSafe from "../Components/HydrationSafe";
 export default function CareerDetails() {
-    const { id } = useParams();
+    // const { id } = useParams();
     const career = useLoaderData();
     const navigate = useNavigate();
 
     if (!career) {
         return <div>Loading...</div>
     }
-
-
       const handleApplyClick = () => {
         navigate('/apply');
       }
-
     return (
-        <div className="career-details">
+        <HydrationSafe>
+            {career ? (
+
+                       <div className="career-details">
             <h2>Career Details for {career.title}</h2>
             <p><strong>Location:</strong> {career.location}</p>
             <p><strong>Institute:</strong> {career.institute}</p>
@@ -64,13 +63,25 @@ export default function CareerDetails() {
           <button onClick={handleApplyClick}>Apply Now.</button>
 
         </div>
+            ) : (<div>Loadeing...</div>
+
+            )}
+       
+        </HydrationSafe>
     );
 }
 
 // loader function
 export const careerDetailsLoader = async ({ params }) => {
+    try{
     const { id } = params;
     const res = await fetch('http://localhost:4000/careers/' + id);
     
-    return res.json();
+    if (!res.ok) {
+        throw new Error('Failed to fetch career details.');
+    }  return res.json();
+    } catch(error) {
+    console.error(error);
+    return null;
+}
 };

@@ -34,11 +34,10 @@ export default function RootLayout() {
                       <NavLink to="/"  onClick={closeDropdown}>Home</NavLink>
                      <NavLink to="about"  onClick={closeDropdown}>About</NavLink>
                     <NavLink to="help"  onClick={closeDropdown}>Help</NavLink>
-                    <NavLink to="careers"  onClick={closeDropdown}>Careers</NavLink>
+                    <NavLink to="careers"  onClick={closeDropdown}>Jobs</NavLink>
                     <span className="logout-link" onClick={handleLogout}>Log Out</span>
               </div>
              </div>
-             
           </nav>
           <Breadcrumbs />
       </header> 

@@ -18,8 +18,8 @@ import CareersLayout from './layouts/CareersLayout'
 import Careers , { CareersLoader } from './pages/Careers/careers'
 import CareerDetails, { careerDetailsLoader } from './pages/CareerDetails'
 import ApplyForm from './pages/ApplyForm'
-import ReactDOM from 'react-dom'
 import './App.css'
+import React from 'react'
 
  const router = createBrowserRouter(
   createRoutesFromElements(
@@ -65,7 +65,13 @@ import './App.css'
  )
 function App() {
   return (
-  <RouterProvider router={router} />
+    <React.StrictMode>
+       <RouterProvider
+   router={router} 
+   fallbackElement={<div>Loading...</div>}
+   />
+    </React.StrictMode>
+ 
       );
 }
 
