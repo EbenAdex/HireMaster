@@ -223,6 +223,263 @@
           "Flexible working hours."
         ]
       }
+    },
+    {
+      "id": 8,
+      "title": "Backend Developer",
+      "salary": 55000,
+      "institute": "CodeCraft Solutions",
+      "location": "Berlin, Germany",
+      "description": {
+        "about": "We are seeking a talented Backend Developer to join our engineering team. You will be responsible for designing, implementing, and maintaining scalable backend systems that power our applications.",
+        "role": {
+          "responsibilities": [
+            "Develop and maintain server-side logic, ensuring high performance and responsiveness.",
+            "Collaborate with frontend developers to integrate user-facing elements.",
+            "Optimize database queries and API endpoints for efficiency.",
+            "Ensure security best practices are followed across all backend systems."
+          ]
+        },
+        "ideal_profile": {
+          "requirements": [
+            "At least 3 years of experience in backend development.",
+            "Proficiency in Node.js, Python, or Java.",
+            "Experience with databases such as PostgreSQL or MongoDB.",
+            "Strong problem-solving and debugging skills."
+          ]
+        },
+        "compensation": "Competitive salary with remote work options.",
+        "what_on_offer": [
+          "Work on cutting-edge technologies.",
+          "Flexible working hours and a remote-friendly environment.",
+          "Growth opportunities and career advancement."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "title": "Cybersecurity Analyst",
+      "salary": 60000,
+      "institute": "SecureTech Global",
+      "location": "New York, USA",
+      "description": {
+        "about": "We are looking for a Cybersecurity Analyst to help safeguard our digital infrastructure from threats. You will play a critical role in identifying, mitigating, and preventing security risks.",
+        "role": {
+          "responsibilities": [
+            "Monitor networks for security breaches and investigate incidents.",
+            "Implement security measures to protect sensitive data.",
+            "Conduct penetration testing and vulnerability assessments.",
+            "Collaborate with IT teams to ensure secure development practices."
+          ]
+        },
+        "ideal_profile": {
+          "requirements": [
+            "At least 3 years of experience in cybersecurity or IT security.",
+            "Familiarity with SIEM tools, firewalls, and intrusion detection systems.",
+            "Strong analytical and problem-solving skills.",
+            "Cybersecurity certifications such as CEH, CISSP, or CISM are a plus."
+          ]
+        },
+        "compensation": "Attractive salary with security certification sponsorships.",
+        "what_on_offer": [
+          "Hands-on experience with advanced security tools.",
+          "Opportunities for continuous learning and certifications.",
+          "Work in a fast-paced, highly innovative environment."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "title": "AI Researcher",
+      "salary": 80000,
+      "institute": "NeuralX Labs",
+      "location": "San Francisco, USA",
+      "description": {
+        "about": "We are pushing the boundaries of artificial intelligence and are looking for an AI Researcher to join our team. You will work on groundbreaking projects that redefine machine learning applications.",
+        "role": {
+          "responsibilities": [
+            "Conduct research on deep learning, NLP, and computer vision.",
+            "Develop and train machine learning models for real-world applications.",
+            "Optimize AI models for efficiency and scalability.",
+            "Collaborate with teams to integrate AI solutions into products."
+          ]
+        },
+        "ideal_profile": {
+          "requirements": [
+            "PhD or Master’s degree in AI, Machine Learning, or related field.",
+            "Strong experience with TensorFlow, PyTorch, or Keras.",
+            "Proficiency in Python and data science libraries.",
+            "Published research in AI conferences is a plus."
+          ]
+        },
+        "compensation": "Competitive salary with research funding opportunities.",
+        "what_on_offer": [
+          "Access to cutting-edge computing resources.",
+          "Collaborate with leading AI researchers.",
+          "Opportunities to publish and present research findings."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "title": "UX/UI Designer",
+      "salary": 45000,
+      "institute": "CreativePulse Studio",
+      "location": "Amsterdam, Netherlands",
+      "description": {
+        "about": "We are seeking a UX/UI Designer to create stunning and user-friendly digital experiences. You will be responsible for designing intuitive interfaces that enhance user engagement.",
+        "role": {
+          "responsibilities": [
+            "Design wireframes, prototypes, and user flows.",
+            "Conduct user research to improve UI/UX strategies.",
+            "Collaborate with developers to ensure seamless implementation.",
+            "Stay updated with the latest design trends and technologies."
+          ]
+        },
+        "ideal_profile": {
+          "requirements": [
+            "At least 2 years of experience in UX/UI design.",
+            "Proficiency in Figma, Adobe XD, or Sketch.",
+            "Strong portfolio showcasing past projects.",
+            "Excellent communication and teamwork skills."
+          ]
+        },
+        "compensation": "Competitive salary with creative freedom.",
+        "what_on_offer": [
+          "Opportunity to work on exciting global projects.",
+          "Work in a dynamic, design-driven environment.",
+          "Flexible work schedule with remote options."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "title": "Game Developer",
+      "salary": 65000,
+      "institute": "PixelForge Studios",
+      "location": "Tokyo, Japan",
+      "description": {
+        "about": "Join our team as a Game Developer and help create immersive gaming experiences. You will work on exciting projects that push the limits of game design and technology.",
+        "role": {
+          "responsibilities": [
+            "Develop and optimize game mechanics using Unity or Unreal Engine.",
+            "Collaborate with designers and artists to implement features.",
+            "Write clean, maintainable, and efficient code.",
+            "Troubleshoot and debug issues to improve game performance."
+          ]
+        },
+        "ideal_profile": {
+          "requirements": [
+            "Experience in game development using Unity or Unreal Engine.",
+            "Proficiency in C# or C++.",
+            "Passion for gaming and a deep understanding of game mechanics.",
+            "Ability to work in a fast-paced team environment."
+          ]
+        },
+        "compensation": "Competitive salary with game royalties.",
+        "what_on_offer": [
+          "Opportunity to work on blockbuster game titles.",
+          "Access to cutting-edge gaming technologies.",
+          "Creative freedom to experiment and innovate."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "title": "Data Analyst",
+      "salary": 55000,
+      "institute": "DataSphere Analytics",
+      "location": "Toronto, Canada",
+      "description": {
+        "about": "We are looking for a Data Analyst to turn complex data into actionable insights. You will be responsible for analyzing trends, optimizing strategies, and supporting data-driven decision-making.",
+        "role": {
+          "responsibilities": [
+            "Collect, clean, and analyze large datasets.",
+            "Develop reports and dashboards to visualize key insights.",
+            "Work closely with teams to optimize business strategies.",
+            "Identify trends and make data-backed recommendations."
+          ]
+        },
+        "ideal_profile": {
+          "requirements": [
+            "Experience with SQL, Python, or R for data analysis.",
+            "Proficiency in data visualization tools like Power BI or Tableau.",
+            "Strong analytical and problem-solving skills.",
+            "Ability to translate data insights into actionable strategies."
+          ]
+        },
+        "compensation": "Competitive salary with data training programs.",
+        "what_on_offer": [
+          "Work with cutting-edge data analytics tools.",
+          "Career growth in a data-driven organization.",
+          "Flexible work environment with remote options."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "title": "Customer Support Specialist",
+      "salary": 40000,
+      "institute": "HelpDesk Pro",
+      "location": "Dublin, Ireland",
+      "description": {
+        "about": "We are looking for a friendly and empathetic Customer Support Specialist to provide excellent service to our users. You will be the first point of contact for customer inquiries and technical support.",
+        "role": {
+          "responsibilities": [
+            "Respond to customer inquiries via email, chat, and phone.",
+            "Troubleshoot technical issues and provide step-by-step assistance.",
+            "Maintain accurate records of customer interactions.",
+            "Collaborate with teams to improve customer experience."
+          ]
+        },
+        "ideal_profile": {
+          "requirements": [
+            "Strong communication and problem-solving skills.",
+            "Experience in customer support or helpdesk roles.",
+            "Ability to handle multiple inquiries efficiently.",
+            "Patience and empathy when dealing with customers."
+          ]
+        },
+        "compensation": "Competitive salary with performance bonuses.",
+        "what_on_offer": [
+          "Supportive and friendly work environment.",
+          "Opportunities for professional development.",
+          "Flexible working hours and remote options."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "title": "Digital Marketing Specialist",
+      "salary": 45000,
+      "institute": "Bright Media",
+      "location": "New York, USA",
+      "description": {
+        "about": "We are looking for a creative and data-driven Digital Marketing Specialist to join our team. This role involves planning and executing marketing campaigns to drive brand awareness and customer engagement.",
+        "role": {
+          "responsibilities": [
+            "Develop and implement digital marketing strategies across various platforms.",
+            "Monitor and analyze campaign performance metrics.",
+            "Collaborate with content creators to produce engaging marketing materials.",
+            "Stay updated on the latest digital marketing trends and tools."
+          ]
+        },
+        "ideal_profile": {
+          "requirements": [
+            "At least 2 years of experience in digital marketing.",
+            "Proficiency in SEO, SEM, and social media marketing.",
+            "Strong analytical skills and experience with marketing analytics tools.",
+            "Excellent communication and project management skills."
+          ]
+        },
+        "compensation": "Competitive salary with performance-based bonuses.",
+        "what_on_offer": [
+          "Opportunities for career growth and development.",
+          "A dynamic and collaborative work environment.",
+          "Flexible working hours and remote work options."
+        ]
+      }
     }
+
   ]
 }

@@ -35,6 +35,36 @@ export default function Faq() {
              complete your profile, and start exploring job opportunities tailored to
               your skills and interests.</p>
         </div>
+
+        <div className="question">
+          <p><strong>Can employers post job listings on HireMaster?</strong></p>
+          <p>Yes, employers can register on our platform, create company profiles, 
+             and post job listings to attract top talent.</p>
+        </div>
+
+        <div className="question">
+          <p><strong>Does HireMaster offer resume-building tools?</strong></p>
+          <p>Yes! We provide AI-powered resume-building tools to help you craft a 
+             professional resume that stands out to employers.</p>
+        </div>
+
+        <div className="question">
+          <p><strong>Can I set up job alerts for new opportunities?</strong></p>
+          <p>Absolutely! You can set up personalized job alerts to receive notifications 
+             whenever new job opportunities that match your preferences are posted.</p>
+        </div>
+
+        <div className="question">
+          <p><strong>Does HireMaster offer career coaching or interview tips?</strong></p>
+          <p>Yes, we provide expert career coaching, resume reviews, and interview 
+             preparation resources to help you succeed in your job search.</p>
+        </div>
+
+        <div className="question">
+          <p><strong>Is my personal information safe on HireMaster?</strong></p>
+          <p>We take data security seriously. Your personal information is encrypted and 
+             only shared with employers when you apply for a job.</p>
+        </div>
       </div>
     );
   }

@@ -1,6 +1,7 @@
 import { NavLink, Outlet, useNavigate } from "react-router-dom"
 import Breadcrumbs from "../Components/Breadcrumbs"
 import { useState } from "react"
+import Footer from "../Components/Footer";
 
 export default function RootLayout() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -45,7 +46,7 @@ export default function RootLayout() {
           <main>
             <Outlet />
           </main>
-
+          <Footer />
         </div>
     )
 }
