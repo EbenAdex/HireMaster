@@ -120,6 +120,86 @@ form label span {
 .apply-form input {
   color: black;
 }
+.signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  padding-top: 10vh;
+  color: black; /* Ensures all text inside is black */
+}
+
+.signup form {
+
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: left;
+  color: black; /* Ensures text inside the form is black */
+}
+
+.signup h2, .signup label {
+  color: black; /* Explicitly setting heading and labels to black */
+}
+.signup button {
+  width: 100%; 
+  padding: 15px; 
+  font-size: 18px; 
+  background-color: #4caf50; 
+  color: white; 
+  border: none; 
+  border-radius: 8px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Add hover effects */
+}
+
+.signup button:hover {
+  background-color: #45a049; /* Slightly darker green on hover */
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+/*Log in*/
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  padding-top: 10vh;
+  color: black; /* Ensures all text inside is black */
+}
+
+.login form {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: left;
+  color: black; /* Ensures text inside the form is black */
+}
+
+.login h2, .login label {
+  color: black; /* Explicitly setting heading and labels to black */
+}
+
+.login button {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Add hover effects */
+}
+
+.login button:hover {
+  background-color: #45a049; /* Slightly darker green on hover */
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
 /*home section*/
 .home-image {
   width: 100%; 
@@ -217,4 +297,161 @@ form label span {
 }
 .breadcrumbs .crumb a {
   color: #ddd;
+}
+/*Stats*/
+.stats {
+  background-color: #f9f9f9; /* Light gray background */
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.stats h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333; /* Dark text color */
+}
+
+.stats p {
+  font-size: 1.2rem;
+  margin: 5px 0;
+  color: #555; /* Slightly lighter text color */
+}
+
+.stats strong {
+  color: #4caf50; /* Green color for emphasis */
+}
+
+/*Testimonial*/
+
+.testimonials {
+  background-color: #f9f9f9; /* Light gray background */
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.testimonials h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333; /* Dark text color */
+  text-align: center;
+}
+
+.testimonial {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.testimonial img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; /* Circular image */
+  object-fit: cover;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for the image */
+}
+
+.testimonial p {
+  font-size: 1rem;
+  color: #555; /* Slightly lighter text color */
+  margin: 0;
+}
+/*Trusted companies*/
+
+.trusted-companies {
+  background-color: #f9f9f9; /* Light gray background */
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.trusted-companies h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333; /* Dark text color */
+}
+
+.company-logos {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between logos */
+}
+
+.company-logos img {
+  width: 100px; /* Adjust the size of the logos */
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.company-logos img:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+/*CareerAdvice*/
+.career-advice {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.career-advice h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.resume-tips, .best-paying-careers {
+  margin-bottom: 30px;
+}
+
+.resume-tips h3, .best-paying-careers h3 {
+  color: #4caf50;
+  margin-bottom: 10px;
+}
+
+.resume-tips ul, .best-paying-careers ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.resume-tips li, .best-paying-careers li {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #555;
+}
+/*Resouces*/
+.resources {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.resources h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.interview-questions h3 {
+  color: #4caf50;
+  margin-bottom: 10px;
+}
+
+.interview-questions ol {
+  padding-left: 20px;
+}
+
+.interview-questions li {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #555;
 }
