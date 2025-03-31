@@ -1,17 +1,21 @@
 {
+  "$schema": "",
   "name": "jobarouter",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/eslint-parser": "^7.27.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "bootstrap": "^5.3.3",
+    "core-js": "^3.41.0",
     "firebase": "^11.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^7.4.0",
     "react-script": "^2.0.5",
-    "react-scripts": "^3.0.1",
+    "react-scripts": "^5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -37,5 +41,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-async-generator-functions": "^7.26.8",
+    "@babel/plugin-transform-class-properties": "^7.25.9",
+    "@babel/plugin-transform-nullish-coalescing-operator": "^7.26.6",
+    "@babel/plugin-transform-numeric-separator": "^7.25.9",
+    "@babel/plugin-transform-object-rest-spread": "^7.25.9",
+    "@babel/plugin-transform-optional-chaining": "^7.25.9",
+    "eslint-webpack-plugin": "^5.0.0",
+    "html-webpack-plugin": "^5.6.3",
+    "rimraf": "^6.0.1"
   }
 }

@@ -20,7 +20,7 @@ import CareerDetails, { careerDetailsLoader } from './pages/CareerDetails';
 import ApplyForm from './pages/ApplyForm';
 import './App.css';
 import React from 'react';
-import TalentAcquisition from './pages/talentAcquisition'; // Corrected import
+import TalentAcquisition from './pages/talentAcquisition';
 import CareerAdvice from './pages/CareerAdvice';
 import Resources from './pages/Resources';
 const router = createBrowserRouter(
@@ -31,7 +31,7 @@ const router = createBrowserRouter(
        <Route path="/signup" element={<SignUp />} />
        <Route path="/login" element={<Login />} />
      </Route>
-     <Route path="/talentAcquisition" element={<TalentAcquisition />} /> {/* Corrected route */}
+     <Route path="/talentAcquisition" element={<TalentAcquisition />} /> 
      <Route path="/careerAdvice" element={<CareerAdvice />} />
      <Route path="/resources" element={<Resources />} />
      <Route path="about" element={<About />} />
