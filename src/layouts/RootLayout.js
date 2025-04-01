@@ -5,6 +5,7 @@ import { useState } from "react";
 
 export default function RootLayout() {
   const [user, setUser] = useState("EbenAdex");
+  const [menuOpen, setMenuOpen] = useState(false); // State to toggle the hamburger menu
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -12,12 +13,19 @@ export default function RootLayout() {
     navigate("/signup");
   };
 
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <div className="root-layout">
       <header>
         <nav className="navbar">
           <h1>HireMaster</h1>
-          <div className="nav-links">
+          <button className="hamburger" onClick={toggleMenu}>
+            ☰
+          </button>
+          <div className={`nav-links ${menuOpen ? "open" : ""}`}>
             {/* Home with dropdown */}
             <div className="nav-item dropdown">
               <NavLink to="/" className="nav-link">
@@ -36,7 +44,7 @@ export default function RootLayout() {
             {/* Talent Acquisition with dropdown */}
             <div className="nav-item dropdown">
               <NavLink to="/talentAcquisition" className="nav-link">
-                Talent 
+                Talent
               </NavLink>
               <div className="dropdown-content">
                 <NavLink to="/resources" className="dropdown-link">

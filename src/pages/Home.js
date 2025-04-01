@@ -1,7 +1,8 @@
-import CareerOppor from '../Assets/CareerOppor.jpg';
 import google from '../Assets/google.jpg';
 import opera from '../Assets/opera.jpg';
 import safari from '../Assets/safari.jpg';
+import introVideo from '../Assets/introVideo.mp4';
+
 
 export default function Home() {
   return (
@@ -15,10 +16,13 @@ export default function Home() {
         and take the first step towards achieving your career goals. Let’s find the perfect job for you!
       </p>
 
-      <img 
-        src={CareerOppor} 
-        alt="Career Opportunities" 
-        className="home-image"
+      <video 
+        src={introVideo} 
+        className="home-video" 
+        autoPlay 
+        loop 
+        muted 
+        playsInline
       />
 
       {/* Live Statistics Section */}
