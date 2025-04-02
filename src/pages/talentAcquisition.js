@@ -6,9 +6,7 @@ export default function TalentAcquisition() {
 
  return (
     <div className="talentAcquisition">
-        
-
-             <h2> Talent acquisition at <strong> HireMaster </strong></h2>
+         <h2> Talent acquisition at <strong> HireMaster </strong></h2>
              <p>
                     The application process at HireMaster is pretty simple and straightforward. 
                     First, feel free to learn more about our company and the open positions available. 
@@ -46,10 +44,15 @@ export default function TalentAcquisition() {
                         <li>
                              Tech:  For a tech position, you can expect to complete a take-home 
                         Hackerrank or Woven technical assessment in addition to a "Day in the Life" interview.
-                        <video controls className="home-video">
-                           <source src={techVideo} type="video/mp4" />
-
-                        </video>
+                        
+                        <video 
+                                src={techVideo} 
+                                className="home-video" 
+                                autoPlay 
+                                loop 
+                                muted 
+                                playsInline
+                              />
                         </li>
                     
                    
@@ -57,9 +60,14 @@ export default function TalentAcquisition() {
                         <li> Corporate: For a corporate position, 
                         you may be asked to complete a role-based assignment that will be shared with the hiring
                         team.
-                        <video controls className="home-video">
-                        <source src={corporateVideo} type="video/mp4" />
-                        </video>
+                        <video 
+                                src={corporateVideo} 
+                                className="home-video" 
+                                autoPlay 
+                                loop 
+                                muted 
+                                playsInline
+                              />
                         </li>
                     
                    </p>

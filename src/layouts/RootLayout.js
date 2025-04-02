@@ -51,7 +51,7 @@ export default function RootLayout() {
                   Resources
                 </NavLink>
                 <NavLink to="/careerAdvice" className="dropdown-link">
-                  Career Advice
+                  Career 
                 </NavLink>
               </div>
             </div>

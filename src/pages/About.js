@@ -20,7 +20,7 @@ export default function About() {
         <h3>What Our Users Say</h3>
         <div className="testimonial">
           <img src={userprofile} alt="User 1" />
-          <p>"I got hired in just two weeks! Amazing platform." - Oluwaleke Abdul-rasaq.</p>
+          <p>"I got hired in just two weeks! Amazing platform." - Ayomiposi Ebenezer.</p>
         </div>
         <div className="testimonial">
           <img src={userprofile2} alt="User 2" />

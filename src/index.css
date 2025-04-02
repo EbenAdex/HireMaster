@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
+
 :root {
   --primary: #2b8a3e;
   --secondary: #f5f5f5;
@@ -7,7 +8,8 @@
 body {
   margin: 0;
   padding: 20px;
-  font-family: "Poppins";
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px !important;
   background: var(--secondary);
   animation: skeleton-loading 1.5s infinite;
 }
@@ -23,6 +25,7 @@ body {
 * {
   color: #4b4b4b;
   margin: 0;
+  font-family: inherit;
 }
 p {
   margin: 20px 0;
@@ -219,7 +222,7 @@ form label span {
   background-color: var(--secondary);
 }
 /* Footer section*/
-
+/*
 .footer {
   background-color: var(--secondary);
   padding: 20px;
@@ -248,6 +251,149 @@ form label span {
 
 .footer ul li a:hover {
   text-decoration: underline;
+}*/
+.footer {
+  background: #f8f9fa; /* Removed the glass effect */
+  padding: 40px 20px;
+  text-align: center;
+  color: #333; /* Dark text for better readability */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Logo and description + Links */
+  gap: 30px;
+  padding: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-logo {
+ 
+  font-weight: bold;
+  color: #333; /* Dark color for logo */
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.footer-column h3 {
+  
+  margin-bottom: 10px;
+  color: #333; /* Dark text */
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin: 5px 0;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: green;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 30px; /* Increased gap to space out the icons */
+  align-items: center;
+}
+
+.footer-social h3 {
+  font-size: 18px;
+  color: #333; /* Dark color */
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px; /* Space icons more */
+}
+
+.social-icons img {
+  width: 40px; /* Made icons larger */
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+.footer-location {
+  display: flex;
+  align-items: center;
+}
+
+.footer-location select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  font-size: 14px;
+}
+
+.footer-copyright {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr; /* Stacking layout for mobile */
+    text-align: center;
+  }
+
+  .footer-links {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-social {
+    align-items: center;
+  }
+
+  .footer-location {
+    margin-top: 10px;
+  }
+
+  /* Adjust search bar for mobile */
+  .footer-search input {
+    width: 150px; /* Make search bar smaller on mobile */
+  }
+
 }
 
 
@@ -428,7 +574,7 @@ form label span {
   color: #555;
 }
 /*Resouces*/
-.resources {
+/*.resources {
   padding: 20px;
   background-color: #f9f9f9;
   border-radius: 8px;
@@ -439,7 +585,51 @@ form label span {
   text-align: center;
   color: #333;
   margin-bottom: 20px;
+}*/
+
+/* Main container */
+.resources-container {
+  max-width: 90%;
+  margin: auto;
+  padding: 20px;
 }
+
+/* Use flexbox to place sections side by side */
+.resources-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+/* Style each section */
+.resources-grid section {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure text wraps properly */
+.resources-grid section h3 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+/* Adjust lists */
+.resources-grid ol, 
+.resources-grid ul {
+  padding-left: 20px;
+  list-style-position: inside;
+}
+
+/* Responsive design for small screens */
+@media (max-width: 768px) {
+  .resources-grid {
+    flex-direction: column;
+  }
+}
+
 
 .interview-questions h3 {
   color: #4caf50;
@@ -489,5 +679,126 @@ form label span {
 
 .job-location {
   color: #555;
+}
+
+/* Career recruitment */
+
+.recruitment-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h2 {
+  color: #2c3e50;
+}
+
+p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.recruitment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: black;
+  background: white;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #666 !important;
+}
+
+.form-group textarea {
+  resize: none;
+}
+
+.submit-btn {
+  padding: 10px 15px;
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover {
+  background: #34495e;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .recruitment-container {
+    width: 90%;
+  }
+}
+
+/* Apply black text color to form inputs, textareas, and selects */
+.form-container {
+  background: #f5f5f5; /* Light background for contrast */
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-container label {
+  font-weight: bold;
+  color: black; /* Ensure labels are black */
+}
+
+.form-container input,
+.form-container textarea,
+.form-container select {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: black; /* Ensure form text is black */
+  font-size: 16px;
+}
+
+
+.form-container button {
+  background: #333;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.form-container button:hover {
+  background: #555;
 }
 
