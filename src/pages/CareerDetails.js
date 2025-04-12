@@ -73,15 +73,27 @@ export default function CareerDetails() {
 
 // loader function
 export const careerDetailsLoader = async ({ params }) => {
-    try{
-    const { id } = params;
-    const res = await fetch('http://localhost:4000/careers/' + id);
-    
-    if (!res.ok) {
-        throw new Error('Failed to fetch career details.');
-    }  return res.json();
-    } catch(error) {
-    console.error(error);
-    return null;
-}
-};
+    try {
+      const { id } = params;  
+      const res = await fetch('/data/db.json');
+  
+      if (!res.ok) {
+        throw new Error('Failed to fetch career details');
+      }
+  
+      const data = await res.json(); 
+      const careerDetails = data.careers.find(career => career.id.toString() === id);
+      
+     
+      if (!careerDetails) {
+        throw new Error(`Career with id ${id} not found`);
+      }
+  
+      return careerDetails;  
+  
+    } catch (error) {
+      console.error('Error:', error);
+      return null;  
+    }
+  };
+  

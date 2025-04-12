@@ -3,6 +3,7 @@ import { useState } from "react";
 
 export default function Careers() {
   const careers = useLoaderData();
+
   const [searchTerm, setSearchTerm] = useState("");
   
   const [selectedTitle, setSelectedTitle] = useState("All");
@@ -62,8 +63,32 @@ export default function Careers() {
 }
 
 //loader function
- export const CareersLoader = async () => {
-    const res = await fetch('http://localhost:4000/careers')
+//  export const CareersLoader = async () => {
+//     const res = await fetch('http://localhost:4000/careers')
 
-    return res.json()
-}
+//     return res.json()
+// }
+
+export const CareersLoader = async () => {
+  const res = await fetch('/data/db.json');
+
+
+  if (!res.ok) {
+    const text = await res.text();  
+    console.error('Failed to fetch careers, response:', text); 
+    throw new Error('Failed to fetch careers');
+  }
+
+  const contentType = res.headers.get('Content-Type');
+  if (!contentType || !contentType.includes('application/json')) {
+    throw new Error('Expected JSON, but got ' + contentType);
+  }
+
+   const data = await res.json();
+  
+  
+  const careers = data.careers || [];
+
+  console.log('Fetched careers:', careers); 
+  return careers;
+};
