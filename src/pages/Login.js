@@ -9,7 +9,6 @@ export default function Login() {
         // Add login logic here (e.g., API call)
         navigate('/');
     };
-
     return (
         <div className="login">
             <h2>Login</h2>

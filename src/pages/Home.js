@@ -1,6 +1,7 @@
 import google from '../Assets/google.jpg';
 import opera from '../Assets/opera.jpg';
 import safari from '../Assets/safari.jpg';
+import Vercel from '../Assets/Vercel.jpg';
 import introVideo from '../Assets/introVideo.mp4';
 
 
@@ -35,11 +36,12 @@ export default function Home() {
 
       {/* Trusted Companies Section */}
       <div className="trusted-companies">
-        <h3>Trusted Hosting Companies</h3>
+        <h3>Trusted Hosting Companies.</h3>
         <div className="company-logos">
           <img src={google} alt="Google" />
           <img src={safari} alt="Safari" />
           <img src={opera} alt="Opera Mini" />
+          <img src={Vercel} alt="Vercel" />
         </div>
       </div>
     </div>

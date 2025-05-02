@@ -79,9 +79,9 @@ export default function Footer() {
           {/* Country/Location Selector */}
           <div className="footer-location">
             <select>
+              <option value="ng">Nigeria</option>
               <option value="us">United States</option>
               <option value="uk">United Kingdom</option>
-              <option value="ng">Nigeria</option>
               <option value="ca">Canada</option>
               <option value="pa">Pakistan</option>
               <option value="as">Austria</option>

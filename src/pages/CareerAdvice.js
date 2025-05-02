@@ -63,23 +63,8 @@ export default function CareerAdvice() {
         </div>
 
         <div className="form-group">
-          <label>Relationship Status:</label>
-          <select name="relationshipStatus" value={formData.relationshipStatus} onChange={handleChange} required>
-            <option value="">Select</option>
-            <option value="Single">Single</option>
-            <option value="Married">Married</option>
-            <option value="Divorced">Divorced</option>
-          </select>
-        </div>
-
-        <div className="form-group">
           <label>Qualifications:</label>
           <input type="text" name="qualifications" value={formData.qualifications} onChange={handleChange} required />
-        </div>
-
-        <div className="form-group">
-          <label>Former Company:</label>
-          <input type="text" name="formerCompany" value={formData.formerCompany} onChange={handleChange} />
         </div>
 
         <div className="form-group">
@@ -90,17 +75,6 @@ export default function CareerAdvice() {
         <div className="form-group">
           <label>Key Skills:</label>
           <input type="text" name="skills" value={formData.skills} onChange={handleChange} required />
-        </div>
-
-        {/* About You & Why HireMaster */}
-        <div className="form-group">
-          <label>Tell us about yourself:</label>
-          <textarea name="aboutYou" value={formData.aboutYou} onChange={handleChange} rows="4" required />
-        </div>
-
-        <div className="form-group">
-          <label>Why do you want to work for HireMaster?</label>
-          <textarea name="whyHireMaster" value={formData.whyHireMaster} onChange={handleChange} rows="4" required />
         </div>
 
         {/* Resume Upload */}

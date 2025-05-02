@@ -1,16 +1,33 @@
+/* Theme Variables (defined elsewhere e.g. in body.dark or body.light) */
+body.light {
+  --bg-color: #f9f9f9; /* remove navbar background in light mode */
+  --text-color: #000000;
+  --dropdown-bg: #ffffff;
+  --dropdown-text: #000000;
+}
+
+body.dark {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --dropdown-bg: #000000;
+  --dropdown-text: #ffffff;
+}
+
 /* Navbar Styles */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f5f5f5;
+  background-color: var(--bg-color);
   padding: 10px 20px;
-  color: black;
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .navbar h1 {
   margin: 0;
   font-size: 24px;
+  color: var(--text-color);
 }
 
 .nav-links {
@@ -19,22 +36,20 @@
   position: relative;
 }
 
-.nav-link {
+.nav-link, .dropdown-link, .logout-link {
   text-decoration: none;
-  color: black;
+  color: var(--text-color);
   font-size: 16px;
   transition: color 0.3s ease;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.dropdown-link:hover {
   color: #d4d4d4;
 }
 
 .logout-link {
-  color: red;
   cursor: pointer;
-  font-size: 16px;
-  transition: color 0.3s ease;
 }
 
 .logout-link:hover {
@@ -49,7 +64,8 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: var(--dropdown-bg);
+  color: var(--dropdown-text);
   min-width: 160px;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -60,14 +76,13 @@
 }
 
 .dropdown-link {
-  color: black;
-  text-decoration: none;
   padding: 10px;
   display: block;
+  color: var(--dropdown-text);
 }
 
 .dropdown-link:hover {
-  background-color: #f1f1f1;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Hamburger Menu */
@@ -76,7 +91,7 @@
   font-size: 24px;
   background: none;
   border: none;
-  color: black;
+  color: var(--text-color);
   cursor: pointer;
 }
 
@@ -88,7 +103,7 @@
     position: absolute;
     top: 60px;
     right: 0;
-    background: #f5f5f5;
+    background: var(--bg-color);
     width: 200px;
     padding: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -100,7 +115,7 @@
   }
 
   .nav-link {
-    color: black;
+    color: var(--text-color);
   }
 
   .hamburger {

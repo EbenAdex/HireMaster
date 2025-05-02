@@ -2,7 +2,8 @@ import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import Breadcrumbs from "../Components/Breadcrumbs";
 import Footer from "../Components/Footer";
 import { useState } from "react";
-
+import HMlogo from "../Assets/HMlogo.jpg";
+import ThemeToggle from "../Components/ThemeToggle";
 export default function RootLayout() {
   const [user, setUser] = useState("EbenAdex");
   const [menuOpen, setMenuOpen] = useState(false); // State to toggle the hamburger menu
@@ -21,7 +22,11 @@ export default function RootLayout() {
     <div className="root-layout">
       <header>
         <nav className="navbar">
-          <h1>HireMaster</h1>
+          <div className="logo-container">
+            <img src={HMlogo} alt="Company logo" className="company-logo" />
+            <h1>HireMaster</h1>
+          </div>
+          
           <button className="hamburger" onClick={toggleMenu}>
             ☰
           </button>
@@ -67,8 +72,11 @@ export default function RootLayout() {
             <span className="logout-link" onClick={handleLogout}>
               Log Out
             </span>
+
+            <ThemeToggle />
           </div>
         </nav>
+        
         <Breadcrumbs />
       </header>
 

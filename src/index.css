@@ -365,6 +365,11 @@ form label span {
   color: #555;
 }
 
+@media (max-width: 768px) {
+  .footer {
+    display: none;
+  }
+}
 /* Responsive Design for Mobile */
 @media (max-width: 768px) {
   .footer-container {
@@ -527,19 +532,29 @@ form label span {
 .company-logos {
   display: flex;
   justify-content: center;
-  gap: 20px; /* Space between logos */
+  flex-wrap: wrap; /* Important for small screens */
+  gap: 20px;
+  padding: 1rem;
 }
 
 .company-logos img {
-  width: 100px; /* Adjust the size of the logos */
+  width: 100px;
   height: auto;
   object-fit: contain;
   transition: transform 0.3s ease;
 }
 
 .company-logos img:hover {
-  transform: scale(1.1); /* Slight zoom effect on hover */
+  transform: scale(1.1);
 }
+
+/* 📱 Mobile Responsiveness */
+@media (max-width: 600px) {
+  .company-logos img {
+    width: 70px; /* Smaller, cleaner size for mobile */
+  }
+}
+
 /*CareerAdvice*/
 .career-advice {
   padding: 20px;
@@ -801,4 +816,57 @@ p {
 .form-container button:hover {
   background: #555;
 }
+
+/* Pop up theme */
+.popup {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #4caf50;
+  color: white;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  text-align: center;
+  font-size: 18px;
+}
+
+.popup p {
+  margin: 0;
+}
+/* hmlogo */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between the logo and the text */
+}
+
+.company-logo {
+  width: 40px; /* Adjust the size of the logo */
+  height: 40px;
+  object-fit: contain; /* Ensure the logo maintains its aspect ratio */
+}
+
+
+/*dark&light mode*/
+body.dark {
+  --bg-color: #121212;
+  --text-color: #ffffff; /* Brighter white */
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light {
+  --bg-color: #ffffff;
+  --text-color: #111111;
+  
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Optional: apply to specific sections */
+
 
