@@ -1,4 +1,11 @@
-import { createContext, useContext, useEffect, useMemo, useState } from "react";
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+  useCallback,
+} from "react";
 import { useAuth } from "./AuthContext";
 
 const SupportContext = createContext();
@@ -7,82 +14,100 @@ function SupportProvider({ children }) {
   const { user } = useAuth();
   const [threads, setThreads] = useState({});
 
+  // Load from localStorage
   useEffect(() => {
     const storedThreads = localStorage.getItem("hiremaster_support_threads");
-
     if (storedThreads) {
       setThreads(JSON.parse(storedThreads));
     }
   }, []);
 
+  // Save to localStorage
   useEffect(() => {
-    localStorage.setItem("hiremaster_support_threads", JSON.stringify(threads));
+    localStorage.setItem(
+      "hiremaster_support_threads",
+      JSON.stringify(threads)
+    );
   }, [threads]);
 
   const currentUserKey = user?.email || "guest";
 
-  const currentThread = threads[currentUserKey] || [
-    {
-      id: 1,
-      sender: "Support Agent",
-      senderType: "admin",
-      text: "Hello. Welcome to HireMaster support. How may we help you today?",
-      time: "09:12 AM",
+  const defaultThread = useMemo(
+    () => [
+      {
+        id: 1,
+        sender: "Support Agent",
+        senderType: "admin",
+        text: "Hello. Welcome to HireMaster support. How may we help you today?",
+        time: "09:12 AM",
+      },
+    ],
+    []
+  );
+
+  const currentThread = useMemo(() => {
+    return threads[currentUserKey] || defaultThread;
+  }, [threads, currentUserKey, defaultThread]);
+
+  // User sends message
+  const addUserMessage = useCallback(
+    (text, senderName = "User") => {
+      const newMessage = {
+        id: Date.now(),
+        sender: senderName,
+        senderType: "user",
+        text,
+        time: new Date().toLocaleTimeString([], {
+          hour: "2-digit",
+          minute: "2-digit",
+        }),
+      };
+
+      setThreads((prev) => ({
+        ...prev,
+        [currentUserKey]: [
+          ...(prev[currentUserKey] || defaultThread),
+          newMessage,
+        ],
+      }));
     },
-  ];
+    [currentUserKey, defaultThread]
+  );
 
-  const addUserMessage = (text, senderName = "User") => {
-    const newMessage = {
-      id: Date.now(),
-      sender: senderName,
-      senderType: "user",
-      text,
-      time: new Date().toLocaleTimeString([], {
-        hour: "2-digit",
-        minute: "2-digit",
-      }),
-    };
+  // Admin sends message
+  const addAdminMessageToThread = useCallback(
+    (userKey, text, senderName = "Support Agent") => {
+      const newMessage = {
+        id: Date.now(),
+        sender: senderName,
+        senderType: "admin",
+        text,
+        time: new Date().toLocaleTimeString([], {
+          hour: "2-digit",
+          minute: "2-digit",
+        }),
+      };
 
-    setThreads((prev) => ({
-      ...prev,
-      [currentUserKey]: [...(prev[currentUserKey] || currentThread), newMessage],
-    }));
-  };
+      setThreads((prev) => ({
+        ...prev,
+        [userKey]: [...(prev[userKey] || []), newMessage],
+      }));
+    },
+    []
+  );
 
-  const addAdminMessageToThread = (userKey, text, senderName = "Support Agent") => {
-    const newMessage = {
-      id: Date.now(),
-      sender: senderName,
-      senderType: "admin",
-      text,
-      time: new Date().toLocaleTimeString([], {
-        hour: "2-digit",
-        minute: "2-digit",
-      }),
-    };
+  // Clear thread
+  const clearThread = useCallback(
+    (userKey) => {
+      setThreads((prev) => ({
+        ...prev,
+        [userKey]: defaultThread,
+      }));
+    },
+    [defaultThread]
+  );
 
-    setThreads((prev) => ({
-      ...prev,
-      [userKey]: [...(prev[userKey] || []), newMessage],
-    }));
-  };
-
-  const clearThread = (userKey) => {
-    setThreads((prev) => ({
-      ...prev,
-      [userKey]: [
-        {
-          id: 1,
-          sender: "Support Agent",
-          senderType: "admin",
-          text: "Hello. Welcome to HireMaster support. How may we help you today?",
-          time: "09:12 AM",
-        },
-      ],
-    }));
-  };
-
-  const threadKeys = Object.keys(threads);
+  const threadKeys = useMemo(() => Object.keys(threads), [threads]);
 
   const value = useMemo(
     () => ({
@@ -94,10 +119,22 @@ function SupportProvider({ children }) {
       addAdminMessageToThread,
       clearThread,
     }),
-    [threads, currentThread, currentUserKey, threadKeys]
+    [
+      threads,
+      currentThread,
+      currentUserKey,
+      threadKeys,
+      addUserMessage,
+      addAdminMessageToThread,
+      clearThread,
+    ]
   );
 
-  return <SupportContext.Provider value={value}>{children}</SupportContext.Provider>;
+  return (
+    <SupportContext.Provider value={value}>
+      {children}
+    </SupportContext.Provider>
+  );
 }
 
 export function useSupport() {
