@@ -1,69 +1,92 @@
-import {  
-  Route, 
-  RouterProvider, 
-  createRoutesFromElements,
-  createBrowserRouter
-} from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import PublicLayout from "./layouts/PublicLayout";
+import ApplicantLayout from "./layouts/ApplicantLayout";
+import AdminLayout from "./layouts/AdminLayout";
+import ProtectedRoute from "./Components/common/ProtectedRoute";
+import PublicOnlyRoute from "./Components/common/PublicOnlyRoute";
 
-import Home from './pages/Home';
-import SignUp from './pages/SignUp';
-import Login from './pages/Login';
-import About from './pages/About';
-import RootLayout from './layouts/RootLayout';
-import HelpLayout from './layouts/HelpLayout';
-import Faq from './pages/Help/faq';
-import Contact, { contactAction } from './pages/Help/contact';
-import NotFound from './pages/NotFound';
-import CareersLayout from './layouts/CareersLayout';
-import Careers, { CareersLoader } from './pages/Careers/careers';
-import CareerDetails, { careerDetailsLoader } from './pages/CareerDetails';
-import ApplyForm from './pages/ApplyForm';
-import './App.css';
-import React from 'react';
-import TalentAcquisition from './pages/talentAcquisition';
-import CareerAdvice from './pages/CareerAdvice';
-import Resources from './pages/Resources';
-const router = createBrowserRouter(
- createRoutesFromElements(
-   <Route path="/" element={<RootLayout />}>
-     <Route>
-       <Route index element={<Home />} />
-       <Route path="/signup" element={<SignUp />} />
-       <Route path="/login" element={<Login />} />
-     </Route>
-     <Route path="/talentAcquisition" element={<TalentAcquisition />} /> 
-     <Route path="/careerAdvice" element={<CareerAdvice />} />
-     <Route path="/resources" element={<Resources />} />
-     <Route path="about" element={<About />} />
-     <Route path="help" element={<HelpLayout />}>
-       <Route path="faq" element={<Faq />} />
-       <Route path="contact" element={<Contact />} action={contactAction} />
-     </Route>
-     <Route path="Careers" element={<CareersLayout />}>
-       <Route index element={<Careers />} loader={CareersLoader} />
-     </Route>
-     <Route>
-       <Route
-         path="/careers/:id"
-         element={<CareerDetails />}
-         loader={careerDetailsLoader}
-       />
-       <Route path="/apply" element={<ApplyForm />} />
-     </Route>
-     <Route path="*" element={<NotFound />} />
-   </Route>
- )
-);
+import Welcome from "./pages/public/Welcome";
+import Home from "./pages/public/Home";
+import About from "./pages/public/About";
+import Opportunities from "./pages/public/Opportunities";
+import OpportunityDetails from "./pages/public/OpportunityDetails";
+import PartnerWithUs from "./pages/public/PartnerWithUs";
+import Resources from "./pages/public/Resources";
+import Support from "./pages/public/Support";
+import Faq from "./pages/public/Faq";
+import Login from "./pages/public/Login";
+import SignUp from "./pages/public/SignUp";
+import AdminLogin from "./pages/public/AdminLogin";
+import ForgotPassword from "./pages/public/ForgotPassword";
+import PrivacyPolicy from "./pages/public/PrivacyPolicy";
+import TermsOfService from "./pages/public/TermsOfService";
+import CookiePolicy from "./pages/public/CookiePolicy";
+import NotFound from "./pages/public/NotFound";
+
+import Dashboard from "./pages/applicant/Dashboard";
+import MyApplications from "./pages/applicant/MyApplications";
+import SavedJobs from "./pages/applicant/SavedJobs";
+import Profile from "./pages/applicant/Profile";
+import Settings from "./pages/applicant/Settings";
+
+import AdminDashboard from "./pages/admin/AdminDashboard";
+import ManageOpportunities from "./pages/admin/ManageOpportunities";
+import Applicants from "./pages/admin/Applicants";
+import ShortlistedCandidates from "./pages/admin/ShortlistedCandidates";
+import Reports from "./pages/admin/Reports";
+import SupportInbox from "./pages/admin/SupportInbox";
 
 function App() {
- return (
-   <React.StrictMode>
-     <RouterProvider
-       router={router}
-       fallbackElement={<div>Loading...</div>}
-     />
-   </React.StrictMode>
- );
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route element={<PublicOnlyRoute />}>
+          <Route path="/" element={<Welcome />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/admin-login" element={<AdminLogin />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+        </Route>
+
+        <Route element={<ProtectedRoute />}>
+          <Route path="/" element={<PublicLayout />}>
+            <Route path="home" element={<Home />} />
+            <Route path="about" element={<About />} />
+            <Route path="opportunities" element={<Opportunities />} />
+            <Route path="opportunities/:id" element={<OpportunityDetails />} />
+            <Route path="partner-with-us" element={<PartnerWithUs />} />
+            <Route path="resources" element={<Resources />} />
+            <Route path="support" element={<Support />} />
+            <Route path="faq" element={<Faq />} />
+            <Route path="privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="terms-of-service" element={<TermsOfService />} />
+            <Route path="cookie-policy" element={<CookiePolicy />} />
+          </Route>
+
+          <Route path="/applicant" element={<ApplicantLayout />}>
+            <Route path="dashboard" element={<Dashboard />} />
+            <Route path="applications" element={<MyApplications />} />
+            <Route path="saved-jobs" element={<SavedJobs />} />
+            <Route path="profile" element={<Profile />} />
+            <Route path="settings" element={<Settings />} />
+          </Route>
+        </Route>
+
+        <Route element={<ProtectedRoute requireAdmin />}>
+          <Route path="/admin" element={<AdminLayout />}>
+            <Route path="dashboard" element={<AdminDashboard />} />
+            <Route path="opportunities" element={<ManageOpportunities />} />
+            <Route path="applicants" element={<Applicants />} />
+            <Route path="shortlisted" element={<ShortlistedCandidates />} />
+            <Route path="reports" element={<Reports />} />
+            <Route path="support" element={<SupportInbox />} />
+          </Route>
+        </Route>
+
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;

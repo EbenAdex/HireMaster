@@ -1,0 +1,126 @@
+const jobs = [
+  {
+    id: "student-affairs-assistant",
+    title: "Student Affairs Assistant",
+    company: "UNILAG Student Affairs Division",
+    location: "Akoka, Lagos",
+    type: "Part-Time",
+    category: "Student Role",
+    level: "Student",
+    salaryRange: "0-50000",
+    skills: ["Communication", "Documentation", "Organization"],
+    description:
+      "Support administrative operations, student documentation, and office coordination within the Student Affairs Division.",
+    requirements: [
+      "Must be a currently enrolled student",
+      "Good communication and organizational skills",
+      "Basic computer literacy",
+      "Ability to work with records and documentation",
+    ],
+    responsibilities: [
+      "Assist with record keeping and filing",
+      "Support office communication and scheduling",
+      "Help with student-facing administrative tasks",
+      "Maintain proper handling of documents",
+    ],
+    deadline: "2026-05-20",
+  },
+  {
+    id: "frontend-intern",
+    title: "Frontend Developer Intern",
+    company: "Lagos Tech Studio",
+    location: "Remote",
+    type: "Internship",
+    category: "Tech",
+    level: "Entry-Level",
+    salaryRange: "50000-150000",
+    skills: ["HTML", "CSS", "JavaScript", "React"],
+    description:
+      "Work with the product team to build and improve responsive web interfaces for digital products.",
+    requirements: [
+      "Basic knowledge of HTML, CSS, JavaScript, and React",
+      "Ability to build responsive interfaces",
+      "Willingness to learn and collaborate",
+    ],
+    responsibilities: [
+      "Build user interface components",
+      "Fix layout and responsiveness issues",
+      "Work with senior developers on product improvements",
+    ],
+    deadline: "2026-05-28",
+  },
+  {
+    id: "graduate-trainee-operations",
+    title: "Graduate Trainee - Operations",
+    company: "PrimeAxis Consulting",
+    location: "Victoria Island, Lagos",
+    type: "Full-Time",
+    category: "Graduate Role",
+    level: "Graduate",
+    salaryRange: "150000-300000",
+    skills: ["Reporting", "Coordination", "Analysis"],
+    description:
+      "Join a structured trainee programme focused on operations, reporting, and business coordination.",
+    requirements: [
+      "Bachelor's degree or equivalent qualification",
+      "Strong communication and analytical thinking",
+      "Ability to work in a fast-paced environment",
+    ],
+    responsibilities: [
+      "Support day-to-day operational processes",
+      "Prepare reports and business documentation",
+      "Assist with internal coordination and workflow support",
+    ],
+    deadline: "2026-06-04",
+  },
+  {
+    id: "customer-support-associate",
+    title: "Customer Support Associate",
+    company: "SwiftServe",
+    location: "Yaba, Lagos",
+    type: "Full-Time",
+    category: "Support",
+    level: "Professional",
+    salaryRange: "150000-300000",
+    skills: ["Communication", "Customer Support", "Problem Solving"],
+    description:
+      "Provide support to customers across phone, email, and chat while maintaining strong communication standards.",
+    requirements: [
+      "Good written and spoken English",
+      "Strong interpersonal communication",
+      "Basic digital literacy",
+    ],
+    responsibilities: [
+      "Respond to customer complaints and questions",
+      "Escalate unresolved issues appropriately",
+      "Maintain accurate support records",
+    ],
+    deadline: "2026-06-02",
+  },
+  {
+    id: "project-coordinator",
+    title: "Project Coordinator",
+    company: "BridgePoint Solutions",
+    location: "Ikeja, Lagos",
+    type: "Contract",
+    category: "Operations",
+    level: "Professional",
+    salaryRange: "300000+",
+    skills: ["Planning", "Coordination", "Project Tracking"],
+    description:
+      "Coordinate schedules, project tasks, and communication across internal teams and clients.",
+    requirements: [
+      "Strong coordination and planning ability",
+      "Experience with task tracking and reporting",
+      "Good communication and teamwork",
+    ],
+    responsibilities: [
+      "Coordinate project timelines and updates",
+      "Track team deliverables",
+      "Communicate progress to stakeholders",
+    ],
+    deadline: "2026-06-10",
+  },
+];
+
+export default jobs;
